@@ -21,16 +21,20 @@ function search(){
 		var text = "";
 		for(var i in data.data.children){
 			var t = data.data.children[i].data;
-			text += "<p><a href='"+t.url+"' target='_blank'>"+t.title+"</a>&#32;("+t.subreddit+")";//&#32;<button onclick='expand("+t.selftext+")'>Expand</button>";
+			text += "<p><a href='"+t.url+"' target='_blank'>"+t.title+"</a>&#32;("+t.subreddit+")&#32;<button onclick='expand("+i+")'>Expand</button>";
 			text+= "<br/ >";
 			text+= "Author: &#32; "+t.author;
-			//text+="<div class='text'></div></p>";		
+			text+="<div id='text"+i+"' class='hide'>"+t.selftext+"<hr></div></p>";		
 		}
 		document.getElementById("results").innerHTML = text;
      });     
 }
 
-/*function expand(txt){
-		document.getElementByClass("text").innerHTML = txt;
-		alert(txt);
-}*/
+function expand(i){
+	if(document.getElementById("text"+i).className == "hide"){
+		document.getElementById("text"+i).className="show";
+	}
+	else{
+		document.getElementById("text"+i).className="hide";
+	}	
+}
