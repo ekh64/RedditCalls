@@ -1,0 +1,27 @@
+body {
+	background-color: #CED8F6;
+	font-family: "Arial", Sans-serif;
+	font-size:smaller;
+	text-align:center; 
+}
+
+#resultsbox{
+	margin: 0px 150px 0px 150px;
+	background-color: white;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+
+a{
+	font-size: larger;
+	text-align:left;
+}
+
+h1{
+	font-style:italic;
+}
+
+#red{
+	color:red;
+	display:inline;
+}
